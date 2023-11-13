@@ -13,11 +13,15 @@ body {
 
 .nav {
     width: 100%;
-    height: 65px;
+    height: 10vh;
     position: fixed;
     line-height: 65px;
     text-align: center;
+    background-color: transparent;
+    transition: black 0.3s ease;
 }
+
+
 
 .nav div.logo {
     float: left;
@@ -28,8 +32,9 @@ body {
 
 .nav div.logo a {
     text-decoration: none;
-    color: #fff;
-    font-size: 2.5rem;
+    color: #000000;
+    font-size: 3.5rem;
+    font-weight: 600;
 }
 
 .nav div.logo a:hover {
@@ -59,9 +64,10 @@ body {
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     line-height: 65px;
     font-size: 2.4rem;
+    font-weight: 400;
 }
 
 .nav div.main_list ul li a:hover {
@@ -73,9 +79,55 @@ body {
 .home {
     width: 100%;
     height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
+    background-image: url(/frontend/img/home.jpg);
     background-position: center top;
     background-size: cover;
+    background-attachment: fixed;
+}
+.home h2 {
+    color: #000000;
+    font-size: 2vw;
+    font-weight: 800;
+    margin-left: 8vw;
+}
+.home h1 {
+    color: #000000;
+    font-size: 3vw;
+    font-weight: 900;
+    margin-right: 8vw;
+
+}
+.home p {
+    color: rgb(0, 0, 0);
+    font-size: 3vh;
+    font-weight: 800;
+    margin-bottom: 5vh;
+
+}
+.home .container{
+    height: 100%;
+}
+.home .container .row {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.home .container .row .col-md-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+.blog {
+    width: 100%;
+    height: 100vh;
+    background-color: #00e676;
 }
 
 .navTrigger {
@@ -138,7 +190,6 @@ body {
         display: block;
     }
 }
-
 
 .navTrigger {
     cursor: pointer;
@@ -348,19 +399,21 @@ body {
     .myP {
         padding: 2%;
     }
+}
+.card-bg{
+    width: 100%;
+    height: 100%;
     
 }
 
-.footer .container-fluid{
+.footer .container-fluid {
     padding-top: 2vh;
-    height: 20vh;
+    height: 30vh;
     width: 100%;
     background-color: #111;
-    padding:10px;;
+    padding: 10px;
     bottom: 0;
-    
 }
-.footer .container-fluid h2{
-    color: #fff ;
+.footer .container-fluid h2 {
+    color: #fff;
 }
-

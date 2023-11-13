@@ -17,7 +17,7 @@
         <nav class="nav">
             <div class="container">
                 <div class="logo">
-                    <a href="#">Al F<i class="bx bxs-map" style=" font-size: medium ;"></i>rusia</a>
+                    <a href="#">Al F<i class="bx bxs-map" style=" font-size: 3rem ;"></i>rusia</a>
                 </div>
                 <div id="mainListDiv" class="main_list">
                     <ul class="navlinks">
@@ -25,6 +25,8 @@
                         <li><a href="#">Package Travel</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
+                        <li><a href="#">Add Booking</a></li>
+
                     </ul>
                 </div>
                 <span class="navTrigger">
@@ -37,9 +39,6 @@
 
     </header>
     <main class="main">
-        <div class="home">
-
-        </div>
         @yield('content')
     </main>
     <footer class="footer">
@@ -47,7 +46,8 @@
             <h2>Footer</h2>
         </div>
     </footer>
-
+<!-- scripts -->
+<script src="{{ asset('frontend/js/main.js') }}"></script>
 </body>
 
 </html>
