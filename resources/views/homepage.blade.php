@@ -11,7 +11,7 @@
                         <h1>Wonderfull world</h1>
                     </div>
                     <div class="col-md-12">
-                        <p>It's the perfect time travel and enjoy the 
+                        <p>It's the perfect time travel and enjoy the
                             beauty of the world.
                         </p>
                     </div>
@@ -21,12 +21,18 @@
         <section class="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 left about">
-                        <div class="card-bg">
-                            
+                    <div class="col-md-6">
+                        <div class="card-bg-left">
+                            <img src="{{ asset('frontend/img/about.jpg') }}" alt="">
                         </div>
-
                     </div>
+
+                    <div class="col-md-6">
+                        <div class="card-bg-right">
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
