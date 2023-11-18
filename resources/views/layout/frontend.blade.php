@@ -17,23 +17,47 @@
         <nav class="nav">
             <div class="container">
                 <div class="logo">
-                    <a href="#">Al F<i class="bx bxs-map" style=" font-size: 3rem ;"></i>rusia</a>
+                    <a href="#">AL F<i class="bx bxs-map" style=" font-size: 3rem ;"></i>RUSIA</a>
                 </div>
                 <div id="mainListDiv" class="main_list">
                     <ul class="navlinks">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Package Travel</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropbtn">Package Travel</a>
+                            <div class="dropdown-content">
+                                <a href="#">INDIA</a>
+                                <a href="#">UAE</a>
+                                <a href="#">PORTUGAL</a>
+                            </div>
+                        </li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Add Booking</a></li>
-
                     </ul>
                 </div>
-                <span class="navTrigger">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                </span>
+
+                <div class="navTrigger">
+                    <button id="dropdownBtn">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </button>
+                </div>
+                <ul class="navlinks" id="navList">
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Package Travel</a>
+                        <div class="dropdown-content">
+                            <a href="#">INDIA</a>
+                            <a href="#">UAE</a>
+                            <a href="#">PORTUGAL</a>
+                        </div>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Add Booking</a></li>
+                </ul>
+
             </div>
         </nav>
 
@@ -43,11 +67,22 @@
     </main>
     <footer class="footer">
         <div class="container-fluid">
-            <h2>Footer</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>&copy; 2023 AL FARUSIA. All rights reserved.</p>
+                    <div class="social-icons">
+                        <!-- Add your social media icons or links here -->
+                        <a href="#" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
+                        <a href="#" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
+                        <a href="#" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </footer>
-<!-- scripts -->
-<script src="{{ asset('frontend/js/main.js') }}"></script>
+    <!-- scripts -->
+    <script src="{{ asset('frontend/js/main.js') }}"></script>
 </body>
 
 </html>

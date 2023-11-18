@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
 html,
 body {
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,8 +19,9 @@ body {
     position: fixed;
     line-height: 65px;
     text-align: center;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.692);
     transition: black 0.3s ease;
+    z-index: 2;
 }
 
 .nav div.logo {
@@ -30,7 +33,7 @@ body {
 
 .nav div.logo a {
     text-decoration: none;
-    color: #000000;
+    color: #003442 ;
     font-size: 3.5rem;
     font-weight: 600;
 }
@@ -62,7 +65,7 @@ body {
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: #000000;
+    color: #003442 ;
     line-height: 65px;
     font-size: 2.4rem;
     font-weight: 400;
@@ -78,28 +81,42 @@ body {
     width: 100%;
     height: 100vh;
     background-image: url(/frontend/img/home.jpg);
-    background-position: center top;
+background-position:center bottom;
     background-size: cover;
     background-attachment: fixed;
 }
 .home h2 {
-    color: #091235;
-    font-size: 2vw;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 4rem;
     font-weight: 800;
-    margin-left: 8vw;
-    margin-bottom: 1vh;
+    background-color: #003442;
+    z-index: 1;
 }
+
 .home h1 {
-    color: #ffcc00;
-    font-size: 3vw;
+    position: absolute;
+    top:45%; /* Adjust the distance between h1 and h2 as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 6rem;
     font-weight: 900;
-    margin-right: 8vw;
+    background-color: #003442;
+    z-index: 1;
 }
+
 .home p {
-    color: #091235;
-    font-size: 3vh;
+    position: absolute;
+    bottom: 0;
+    color:white;
+    font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 7vh;
+background-color: #003442;
+margin-bottom: 3%;
 }
 .home .container {
     height: 100%;
@@ -127,11 +144,11 @@ body {
 
 .blog {
     width: 100%;
-    height: 100vh;
+    height: max-content;
     background-image: url(/frontend/img/about-bg.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: bottom;
 }
 
 .navTrigger {
@@ -176,7 +193,7 @@ body {
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: #111;
+        background-color: #003442 ;
         /*same background color of navbar*/
         background-position: center top;
     }
@@ -193,7 +210,107 @@ body {
     .nav div.media_button {
         display: block;
     }
+    .about {
+        width: 100%;
+        height: 100%;
+    }
 }
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    text-decoration: none;
+    color: #003442;
+    line-height: 65px;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding: 0 15px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 65px; /* Adjust this value to control the dropdown position */
+    background-color:  #003442     ;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10%;
+}
+
+.nav div.main_list ul .dropdown-content a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    font-size: 1.5rem ;
+    transition: font-size 0.3s ease;
+}
+
+.nav div.main_list ul .dropdown-content a:hover {
+    font-size: 3.5rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Add a class to hide the navlinks initially */
+#navList {
+    display: none;
+}
+
+/* Add styles for the button */
+#dropdownBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#dropdownBtn i {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 6px 0;
+    background-color: #003442 ;
+}
+
+/* Additional styles for main_list */
+.main_list {
+    height: 65px;
+    float: right;
+}
+
+.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.main_list ul li a {
+    text-decoration: none;
+    color: #003442 ;
+    line-height: 65px;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.main_list ul li a:hover {
+    color: #ffcc00;
+}
+
+
 
 .navTrigger {
     cursor: pointer;
@@ -407,21 +524,73 @@ body {
 .card-bg-left {
     width: 80%;
     height: 60vh;
-
 }
 .card-bg-left img {
     height: 100%;
     width: 100%;
     border-radius: 20%;
+    border: 7px solid #003442 ;
     object-fit: cover;
 }
 .card-bg-right {
     width: 80%;
     height: 60vh;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 20%;
+    display: contents;
+    justify-content: center;
+}
+.blog-card {
+    margin-top: 20px;
+    width: 80%;
+    height: 624px;
+    background-color: white;
+    border-radius: 10%;
+}
+.blog div.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blog-card img {
+    height: 30vh;
+    width: 100%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+
+    object-fit: fill;
+}
+.blog-card p {
+    font-weight: 700;
+    margin: 2px;
 }
 
+.blog div.row .col-md-12 {
+    display: flex;
+    justify-content: center;
+}
+.blog div.row .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-bg-right h3 {
+    font-size: 5rem;
+    color: #003442 ;
+}
+.card-bg-right h1 {
+    font-size: 7rem;
+    color: #003442 ;
+}
+.card-bg-right p {
+    font-size: 3rem;
+    color: #003442 ;
+}
+.card-bg-right ul li {
+    font-size: 3rem;
+    color: #003442 ;
+}
 .about div.row {
     width: 100%;
     height: 100%;
@@ -438,6 +607,10 @@ body {
 .right-about {
     width: 100%;
 }
+.blog div.row h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
 .footer .container-fluid {
     padding-top: 2vh;
     height: 30vh;
@@ -449,3 +622,40 @@ body {
 .footer .container-fluid h2 {
     color: #fff;
 }
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer {
+    background-color: #003442 ;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 3.2rem;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icon img {
+    width: 30px; /* Adjust the size of your social icons */
+    height: 30px;
+    border-radius: 50%; /* Make the icons circular */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover img {
+    transform: scale(1.2); /* Add a subtle scale effect on hover */
+}
+
