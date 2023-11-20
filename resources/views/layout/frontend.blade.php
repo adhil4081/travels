@@ -17,20 +17,19 @@
         <nav class="nav">
             <div class="container">
                 <div class="logo">
-                    <a href="#">AL F<i class="bx bxs-map" style=" font-size: 3rem ;"></i>RUSIA</a>
+                    <a href="/">AL F<i class="bx bxs-map" style=" font-size: 3rem ;"></i>RUSIA</a>
                 </div>
                 <div id="mainListDiv" class="main_list">
                     <ul class="navlinks">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropbtn">Package Travel</a>
+                            <a class="dropbtn">Package Travel</a>   
                             <div class="dropdown-content">
-                                <a href="#">INDIA</a>
+                                <a href="{{ route('packages',['country' =>'INDIA']) }}">INDIA</a>
                                 <a href="#">UAE</a>
                                 <a href="#">PORTUGAL</a>
                             </div>
                         </li>
-                        <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Add Booking</a></li>
                     </ul>
@@ -46,14 +45,13 @@
                 <ul class="navlinks" id="navList">
                     <li><a href="#">Home</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">Package Travel</a>
+                        <a href="" class="dropbtn">Package Travel</a>
                         <div class="dropdown-content">
-                            <a href="#">INDIA</a>
+                            <a href="">INDIA</a>
                             <a href="#">UAE</a>
                             <a href="#">PORTUGAL</a>
                         </div>
                     </li>
-                    <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Add Booking</a></li>
                 </ul>
