@@ -6,7 +6,27 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index (){
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function home()
+    {
+        return view('adminpanel.dashboard');
+    }
+    public function index()
+    {
         return view('homepage');
     }
 }
