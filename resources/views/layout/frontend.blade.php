@@ -23,15 +23,15 @@
                     <ul class="navlinks">
                         <li><a href="/">Home</a></li>
                         <li class="dropdown">
-                            <a class="dropbtn">Package Travel</a>   
+                            <a class="dropbtn">Package Travel</a>
                             <div class="dropdown-content">
-                                <a href="{{ route('packages',['country' =>'INDIA']) }}">INDIA</a>
-                                <a href="#">UAE</a>
-                                <a href="#">PORTUGAL</a>
+                                <a href="{{ route('packages', ['country' => 'INDIA']) }}">INDIA</a>
+                                <a href="{{ route('packages', ['country' => 'UAE']) }}">UAE</a>
+                                <a href="{{ route('packages', ['country' => 'PORTUGAL']) }}">PORTUGAL</a>
                             </div>
                         </li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Add Booking</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=919061754081&text=I want to book">Add Booking</a></li>
                     </ul>
                 </div>
 
@@ -42,18 +42,22 @@
                         <i></i>
                     </button>
                 </div>
-                <ul class="navlinks" id="navList">
-                    <li><a href="#">Home</a></li>
+                <ul class="droplinks" id="navList">
+                    <li><a class="dropbtnmb" href="/">Home</a></li>
                     <li class="dropdown">
-                        <a href="" class="dropbtn">Package Travel</a>
+                        <a class="dropbtn" style=" text-decoration: none;
+                        color: #003442;
+                        line-height: 65px;
+                        font-size: 1.5rem;
+                        font-weight: 400;">Package Travel</a>
                         <div class="dropdown-content">
-                            <a href="">INDIA</a>
-                            <a href="#">UAE</a>
-                            <a href="#">PORTUGAL</a>
+                            <a  href="{{ route('packages', ['country' => 'INDIA']) }}">INDIA</a>
+                            <a  href="{{ route('packages', ['country' => 'UAE']) }}">UAE</a>
+                            <a  href="{{ route('packages', ['country' => 'PORTUGAL']) }}">PORTUGAL</a>
                         </div>
                     </li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Add Booking</a></li>
+                    <li><a class="dropbtnmb" href="/contact">Contact</a></li>
+                    <li><a class="dropbtnmb" href="https://api.whatsapp.com/send?phone=919061754081&text=I want to book">Add Booking</a></li>
                 </ul>
 
             </div>
@@ -66,20 +70,16 @@
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
-                    <p>&copy; 2023 AL FARUSIA. All rights reserved.</p>
-                    <div class="social-icons">
-                        <!-- Add your social media icons or links here -->
-                        <a href="#" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
-                        <a href="#" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
-                        <a href="#" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a>
-                    </div>
-                </div>
+                <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+         
+            <p class="copyright" style="margin-top: auto">AL FARUSIA © 2023</p>
 
             </div>
         </div>
     </footer>
     <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <script src="{{ asset('frontend/js/main.js') }}"></script>
 </body>
 

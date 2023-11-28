@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>AL FARUSIA</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -28,19 +28,18 @@
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
-                    {{ Auth::user()->name }}
+                <a class="nav-link" href="#" data-drpdwn="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ ucwords(Auth::user()->name) }}
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" style="left: inherit; right: 0px;">
-                    <a href="" class="dropdown-item">
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="{{ route('home') }}" class="dropdown-item">
                         <i class="mr-2 fas fa-file"></i>
                         {{ __('My profile') }}
                     </a>
                     <div class="dropdown-divider"></div>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <a href="{{ route('logout') }}" class="dropdown-item"
-                           onclick="event.preventDefault(); this.closest('form').submit();">
+                        <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault(); this.closest('form').submit();">
                             <i class="mr-2 fas fa-sign-out-alt"></i>
                             {{ __('Log Out') }}
                         </a>
@@ -48,6 +47,7 @@
                 </div>
             </li>
         </ul>
+        
     </nav>
     <!-- /.navbar -->
 

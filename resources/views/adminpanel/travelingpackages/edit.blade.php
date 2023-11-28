@@ -21,7 +21,7 @@
 
                 <div class="col-lg-12">
                     <div class="card p-3">
-                        <form method="post" action=" {{ route('updatepackage',[$travel_package->id]) }} ">
+                        <form method="post" action=" {{ route('updatepackage',[$travel_package->id]) }}"enctype="multipart/form-data">
                             @csrf
                             @method('put')
                             
@@ -54,11 +54,15 @@
                                         placeholder="example: Cochin-Munnar-Marayur-Vattavada-Cochin">
                                 </div>
                             </div>
+                            
+                        
                             <div class="form-group row border-bottom pb-4">
                                 <label for="media" class="col-sm-2 col-form-label">Images</label>
                                 <div class="col-sm-10">
-                                    <input type="file" class="form-control" name="media" value="{{  $travel_package->media }}"
-                                        id="media">
+                                    <input type="text" class="form-control" value="{{ $travel_package->media }}" readonly>
+
+                                    <input type="file" class="form-control" name="new_media" id="media">
+
                                 </div>
                             </div>
 

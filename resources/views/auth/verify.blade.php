@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminpanel.layouts.guest')
 
 @section('content')
 <div class="container">

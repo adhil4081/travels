@@ -20,4 +20,8 @@ class package extends Model
         'media', // Add any other fields you want to allow mass assignment for
     ];
     use HasFactory;
+    public function galleries()
+    {
+        return $this->hasMany('App\Models\Gallery');
+    }
 }

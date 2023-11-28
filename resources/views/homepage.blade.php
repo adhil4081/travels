@@ -34,13 +34,13 @@
                             <P>We always ready to serve by providing the best service for you. We make a good choices to
                                 travel around the world.</P>
                             <ul>
-                                <li> Best places in the world </li>
+                                <li> - Best places in the world - </li>
 
-                                <li> Affordable price for you </li>
+                                <li> - Affordable price for you - </li>
 
-                                <li> Best plan for your time </li>
+                                <li> - Best plan for your time - </li>
 
-                                <li> Security guarantee </li>
+                                <li> - Security guarantee - </li>
                             </ul>
                         </div>
                     </div>
